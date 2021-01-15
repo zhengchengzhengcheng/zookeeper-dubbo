@@ -1,0 +1,15 @@
+server:
+  port: 8081
+dubbo:
+  protocol:
+    name: dubbo     #指定通信规则（通信协议&通信端口）
+    port: 20880     #dubbo端口号
+  registry:
+    protocol: zookeeper             #zk名
+    address: 192.168.0.149:2181     #zk地址
+  #    address: zookeeper://192.168.0.149:2181
+  scan:
+    base-packages: com.cg.service   #接口位置
+  application:
+    name: server-provider   #dubbo提供者的别名，只是个标识(一般写自己的项目名称)
+
